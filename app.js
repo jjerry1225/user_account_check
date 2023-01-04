@@ -10,6 +10,9 @@ const routes = require("./routes");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// 套用body-parser
+app.use(express.urlencoded({ extended: true }));
+
 // 設定route
 app.use(routes);
 
